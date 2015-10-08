@@ -1,0 +1,117 @@
+// 1px 解决方案
+
+border-default-color = #000
+
+absolute(t, r, b, l)
+    position: absolute
+    top: t
+    right: r
+    bottom: b
+    left: l
+
+// 设置边框颜色
+set-border-color(color)
+    border-color: color
+
+    &::after
+        border-color: color
+
+// 设置边框颜色
+set-border-radius(radius)
+    border-radius: radius
+
+    &::after
+        border-radius: radius
+
+// 如果device-pixel-ratio === 1时不需要做缩放，使用最原始的方式，避免浪费cpu
+.border
+    border: 0 solid border-default-color
+
+    &-top
+        border-top-width: 1px
+
+    &-right
+        border-right-width: 1px
+
+    &-bottom
+        border-bottom-width: 1px
+
+    &-left
+        border-left-width: 1px
+
+    &-all
+        border-width: 1px
+
+@media (-webkit-min-device-pixel-ratio:1.5), (min-device-pixel-ratio: 1.5)
+
+    .border
+        position: relative
+        border: none !important
+
+        &::after
+            content: ' '
+            display: block
+            absolute: 0 -33.33% -33.33% 0
+            border: 0 solid border-default-color
+            transform-origin: 0 0
+            pointer-events: none // 解决挡住点击事件的问题
+            transform: scale(.75)
+            width: 133.33%
+            box-sizing: border-box
+
+        &-top
+            &::after
+                border-top-width: 1px
+
+        &-right
+            &::after
+                border-right-width: 1px
+
+        &-bottom
+            &::after
+                border-bottom-width: 1px
+
+        &-left
+            &::after
+                border-left-width: 1px
+
+        &-all
+            &::after
+                border-width: 1px
+
+@media (-webkit-min-device-pixel-ratio:2), (min-device-pixel-ratio: 2)
+
+    .border
+        position: relative
+        border: none !important
+
+        &::after
+            content: ' '
+            display: block
+            absolute: 0 -100% -100% 0
+            border: 0 solid border-default-color
+            transform-origin: 0 0
+            pointer-events: none // 解决挡住点击事件的问题
+            transform: scale(.5)
+            width: 200%
+            box-sizing: border-box
+
+        &-top
+            &::after
+                border-top-width: 1px
+
+        &-right
+            &::after
+                border-right-width: 1px
+
+        &-bottom
+            &::after
+                border-bottom-width: 1px
+
+        &-left
+            &::after
+                border-left-width: 1px
+
+        &-all
+            &::after
+                border-width: 1px

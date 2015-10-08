@@ -1,0 +1,29 @@
+{
+  "name": "1px",
+  "version": "1.0.0",
+  "description": "1px ",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-connect": "^2.2.0",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp": "^3.9.0",
+    "gulp-stylus": "^2.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/huanghuiquan/1px.git"
+  },
+  "keywords": [
+    "1px"
+  ],
+  "author": "huanghuiquan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huanghuiquan/1px/issues"
+  },
+  "homepage": "https://github.com/huanghuiquan/1px#readme"
+}

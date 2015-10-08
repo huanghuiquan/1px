@@ -1,0 +1,94 @@
+.border {
+  border: 0 solid #000;
+}
+.border-top {
+  border-top-width: 1px;
+}
+.border-right {
+  border-right-width: 1px;
+}
+.border-bottom {
+  border-bottom-width: 1px;
+}
+.border-left {
+  border-left-width: 1px;
+}
+.border-all {
+  border-width: 1px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border {
+    position: relative;
+    border: none !important;
+  }
+  .border::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -33.33%;
+    bottom: -33.33%;
+    left: 0;
+    border: 0 solid #000;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    pointer-events: none;
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
+    width: 133.33%;
+    box-sizing: border-box;
+  }
+  .border-top::after {
+    border-top-width: 1px;
+  }
+  .border-right::after {
+    border-right-width: 1px;
+  }
+  .border-bottom::after {
+    border-bottom-width: 1px;
+  }
+  .border-left::after {
+    border-left-width: 1px;
+  }
+  .border-all::after {
+    border-width: 1px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border {
+    position: relative;
+    border: none !important;
+  }
+  .border::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    bottom: -100%;
+    left: 0;
+    border: 0 solid #000;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    pointer-events: none;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    width: 200%;
+    box-sizing: border-box;
+  }
+  .border-top::after {
+    border-top-width: 1px;
+  }
+  .border-right::after {
+    border-right-width: 1px;
+  }
+  .border-bottom::after {
+    border-bottom-width: 1px;
+  }
+  .border-left::after {
+    border-left-width: 1px;
+  }
+  .border-all::after {
+    border-width: 1px;
+  }
+}
