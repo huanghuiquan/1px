@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>1px完美解决方案</title>
+    <link rel="stylesheet" type="text/css" href="/dist/example.css">
+</head>
+<body>
+
+    <h1>1px实现</h1>
+
+    <div class="box border border-top"></div>
+    <div class="box border border-right"></div>
+    <div class="box border border-bottom"></div>
+    <div class="box border border-left"></div>
+    <div class="box box-1 border border-all"></div>
+    <div class="box box-2 border border-all"></div>
+
+    <h2>使用方法</h2>
+    <h3>HTML</h3>
+    <pre>
+&lt;div class=&quot;box border border-top&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;box border border-right&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;box border border-bottom&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;box border border-left&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;box box-1 border border-all&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;box box-2 border border-all&quot;&gt;&lt;/div&gt;
+    </pre>
+
+    <h3>CSS(<a href="http://learnboost.github.io/stylus/">Stylus</a>)</h3>
+    <pre>
+@require "1px"
+
+size(w, h)
+    width: w
+    height: h
+
+.box
+    size: 80px 40px
+    margin: 0 auto
+    margin-top 10px
+
+.box-1
+    set-border-radius(80px)
+
+.box-2
+    set-border-radius(0)
+
+// set default color
+.border
+    set-border-color(#55555d)
+
+.border-left
+    set-border-color(red)
+
+    </pre>
+</body>
+</html>
