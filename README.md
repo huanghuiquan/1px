@@ -2,7 +2,7 @@
 
 > 1px 的[Stylus](https://github.com/stylus/stylus)实现
 
-* 欢迎拍砖
+* [效果预览](https://github.com/huanghuiquan/1px)，欢迎拍砖
 
 ## 实现原理
 
@@ -16,6 +16,7 @@
 - 无兼容性问题，支持所有设备
 - 支持设置颜色
 - 支持设置圆角
+- 不存在无法点击的问题
 - 使用方便
 
 ### 缺点
