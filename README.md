@@ -2,7 +2,7 @@
 
 > 1px 的[Stylus](https://github.com/stylus/stylus)实现
 
-* [效果预览](https://github.com/huanghuiquan/1px)，欢迎拍砖
+* [效果预览](http://huanghuiquan.github.io/1px/)，欢迎拍砖
 
 ## 实现原理
 
